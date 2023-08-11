@@ -1,0 +1,17 @@
+name: new message
+
+on:
+  push:
+    branches:
+      - branch-3
+
+jobs:
+  print-message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print Comment
+        run: 'echo "Code pushed to branch-3 !"'
